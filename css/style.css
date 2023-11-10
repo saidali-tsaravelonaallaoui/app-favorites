@@ -1,0 +1,1694 @@
+@import url('https://fonts.googleapis.com/css2?family=Griffy&family=Montez&family=Montserrat&family=Poppins&family=Viga&display=swap');
+
+/* Styles de base pour le corps du document */
+body {
+    font-family: Viga;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.body_fit {
+    background-color: #F2F6FF;
+}
+
+.body_ninja {
+    background-color: #F4FBF6;
+}
+
+.body_socially {
+    background-color: #f3ffff;
+}
+
+.main_fit {
+    font-family: Poppins;
+}
+
+/* Styles de la barre de navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+/* Styles des liens dans la barre de navigation */
+nav a {
+    display: inline;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    border-radius: 10%;
+    color: #000000;
+}
+
+/* Effet de survol sur les liens de la barre de navigation */
+nav a:hover {
+    color: #fdc10d;
+}
+
+/* Media Query pour rendre la navigation responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
+
+/* Styles pour la section d'en-tête */
+.title article {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 40px;
+
+}
+
+.title h1 {
+    text-align: left;
+    font-family: Griffy;
+    font-size: 60px;
+    color: #fdc10d;
+    text-shadow: 2px 2px 3px #CE5937;
+}
+
+.title p {
+    text-align: left;
+}
+
+.title div {
+    max-width: 500px;
+    max-height: 450px;
+}
+
+.title img {
+    max-width: 100%;
+}
+
+.title p {
+    font-family: Viga;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+/* Styles pour différentes tailles d'écrans */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
+.title button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #000000;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.title button:hover {
+    background: #fdcd0d72;
+    box-shadow: 0 0 30px 5px #fdc10d;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.title button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.title button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 50%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.title button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+/* Media Queries pour rendre la section responsive */
+@media screen and (min-width: 768px) {
+    .title article {
+        flex-direction: row;
+        /* Change la direction du flex container à row pour les écrans plus larges */
+        text-align: left;
+        align-items: center;
+        /* Ajout de l'alignement au centre pour centrer l'image */
+    }
+
+    .title h1 {
+        font-size: 60px;
+        /* Rétablit la taille de police pour les écrans plus larges */
+    }
+
+    .title div {
+        width: auto;
+        /* Rétablit la largeur automatique pour les écrans plus larges */
+    }
+}
+
+
+
+/* START ACCUEIL SECTION NOS PROJET GALLERIE*/
+
+/* Styles pour la section Nos Projets */
+.nos_projet_gal {
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 40px 0;
+}
+
+.nos_projet .projet_galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.nos_projet .projet_galerie .item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 350px;
+}
+
+.nos_projet .projet_galerie .item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.nos_projet .projet_galerie .item .info {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #0404048f;
+    padding: 15px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.info h3 .last-letter {
+    color: #C58BF2;
+}
+
+.nos_projet .projet_galerie .item .info h3 {
+    color: #fdc10d;
+}
+
+.nos_projet .projet_galerie .item .info p {
+    color: #ffffff;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.nos_projet .projet_galerie .item .info a {
+    display: block;
+    margin: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nos_projet .projet_galerie .item:hover .info {
+    opacity: 1;
+    top: 0;
+}
+
+/* Media Query pour rendre la galerie responsive */
+@media screen and (max-width: 768px) {
+    .nos_projet .projet_galerie {
+        justify-content: center;
+    }
+
+    .nos_projet .projet_galerie .item {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+/* END ACCUEIL SECTION NOS PROJET GALLERIE*/
+
+/* START ACCUEIL SECTION2 NOS SERVICES*/
+
+.nos_services {
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    padding-left: 40px;
+    margin-left: 40px;
+}
+
+.serv_consultation,
+.serv_consultation2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sec1,
+.sec2 {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.sec1 div,
+.sec2 div {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.sec1 img,
+.sec2 img {
+    max-height: 280px;
+    max-width: auto;
+    padding-left: 10px;
+}
+
+.article div {
+    flex: 1;
+}
+
+.sec1 h2,
+.sec2 h2 {
+    color: #fdc10d;
+}
+
+.sec1 h2,
+.sec1 p,
+.sec2 h2,
+.sec2 p {
+    padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .serv_consultation,
+    .serv_consultation2 {
+        flex-direction: column;
+    }
+
+    .sec1,
+    .sec2 {
+        text-align: center;
+    }
+
+    .sec1 img,
+    .sec2 img {
+        max-width: 80%;
+        height: auto;
+        margin: 20px 0;
+        padding-left: 0; /* Ajustement pour le padding des images sur des écrans plus petits */
+    }
+}
+
+
+
+
+/*/* END ACCUEIL SECTION2 NOS SERVICES*/
+
+/* DEBUT CSS FITNESSX PAGE */
+
+/* FITNESS TITLE DEBUT */
+.fit_title {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.fit_title h1 {
+    font-size: 50px;
+    font-family: Poppins;
+    text-shadow: 2px 2px 3px #C58BF2;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.fit_title p {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+}
+
+.fit_title h1 .last-letter {
+    color: #C58BF2;
+}
+
+/* FLITNESS TITLE FIN */
+
+/* FITNESS PREVIEW SLIDER DEBUT */
+
+.fit_preview_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 490px;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.wrapper {
+    position: relative;
+    height: 447px;
+    width: 676px;
+}
+
+.wrapper .img {
+    position: absolute;
+}
+
+.wrapper .img img {
+    width: 676px;
+    height: 447px;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+    border-radius: 10px;
+}
+
+#one:checked~.img-1 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#two:checked~.img-1 img,
+#two:checked~.img-2 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#three:checked~.img-1 img,
+#three:checked~.img-2 img,
+#three:checked~.img-3 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#four:checked~.img-1 img,
+#four:checked~.img-2 img,
+#four:checked~.img-3 img,
+#four:checked~.img-4 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#five:checked~.img-1 img,
+#five:checked~.img-2 img,
+#five:checked~.img-3 img,
+#five:checked~.img-4 img,
+#five:checked~.img-5 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+.wrapper .sliders {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    display: flex;
+}
+
+.wrapper .sliders label {
+    border: 2px solid rgb(197, 139, 242);
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+
+#one:checked~.sliders label.one,
+#two:checked~.sliders label.two,
+#three:checked~.sliders label.three,
+#four:checked~.sliders label.four,
+#five:checked~.sliders label.five {
+    width: 35px;
+    border-radius: 14px;
+    background: rgb(197, 139, 242);
+}
+
+.sliders label:hover {
+    background: rgb(197, 139, 242);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.fit_presentation {
+    display: block;
+    width: 580px;
+    text-align: left;
+}
+
+.fit_pres_bloc h3 {
+    text-align: center;
+    text-shadow: 2px 2px 3px #29232e;
+    color: #C58BF2;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.fit_pres_bloc h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.fit_pres_bloc p {
+    font-family: Poppins;
+    margin-bottom: 5px;
+}
+
+/* FITNESS PREVIEW SLIDER FIN */
+
+
+/* START FITNESSX PRESENTATION SECTION 2*/
+
+.fit_pres_sec2 h3 {
+    text-align: center;
+    text-shadow: 2px 2px 3px #29232e;
+    color: #C58BF2;
+    font-size: 25px;
+}
+
+.fit_pres_sec2 div {
+    margin: 40px;
+}
+
+.fit_pres_sec2_bloc {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.fit_pres_sec2_bloc article {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.fit_pres_sec2_bloc h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.fit_pres_sec2_bloc h4 {
+    text-align: center;
+
+}
+
+.fit_pres_sec2_bloc p {
+    text-align: left;
+    margin: 0;
+}
+
+/* FINISH FITNESSX PRESENTATION SECTION 2 */
+
+/* START FITNESSX PRESENTATION PARAGRAPHE SECTION 3 */
+.fit_sec3_pa {
+    display: flex;
+    justify-content: center;
+}
+
+/* FINISH FITNESSX PRESENTATION PARAGRAPHE SECTION 3 */
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+.fit_logo_slogan {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+
+/** LOGOOOOOO START **/
+.logo_fit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo_fit h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #29232e;
+    color: #C58BF2;
+}
+
+.logo_fit div {
+    max-height: 61.01px;
+
+}
+
+.logo_fit_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo_fit img {
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.logo_fit img:hover {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.384);
+}
+
+/** LOGOOOOOO END **/
+
+
+/* START SLOGAN*/
+
+.fit_slogan_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+.fit_slogan_sec h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #29232e;
+    color: #C58BF2;
+}
+
+.fit_slogan_sec p {
+    text-shadow: 2px 2px 3px #C58BF2;
+}
+
+q {
+    quotes: "“" "”";
+}
+
+q::before {
+    content: open-quote;
+}
+
+q::after {
+    content: close-quote;
+}
+
+/*END SLOGAN*/
+
+/* START FITNESS IMPRESSION SECTION */
+
+.fit_imp_box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+/* */
+.fit_imp_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fit_imp_sec h2 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #29232e;
+    color: #C58BF2;
+}
+
+.slidershow_integ {
+    width: 203px;
+    height: 440px;
+    /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+}
+
+.navigation_integ {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding-left: 10px;
+}
+
+.bar_integ {
+    width: 20px;
+    height: 5px;
+    border: 2px solid #C58BF2;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar_integ:hover {
+    background: #C58BF2;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides_integ {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+    /* Ajout d'une transition pour une animation fluide */
+}
+
+.slide_integ {
+    width: 20%;
+    position: relative;
+    /* Ajout de position relative */
+    transition: 0.6s;
+}
+
+.slide_integ img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#r1_integ:checked~.s1_integ {
+    margin-left: 0;
+}
+
+#r2_integ:checked~.s1_integ {
+    margin-left: -20%;
+}
+
+#r3_integ:checked~.s1_integ {
+    margin-left: -40%;
+}
+
+#r4_integ:checked~.s1_integ {
+    margin-left: -60%;
+}
+
+#r5_integ:checked~.s1_integ {
+    margin-left: -80%;
+}
+
+/* */
+
+/**/
+
+.slidershow_entrain {
+    width: 203px;
+    height: 440px;
+    /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+}
+
+.navigation_entrain {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding-left: 35px;
+}
+
+.bar_entrain {
+    width: 20px;
+    height: 5px;
+    border: 2px solid #C58BF2;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar_entrain:hover {
+    background: #C58BF2;
+}
+
+input[name="r_entrain"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides_entrain {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+    /* Ajout d'une transition pour une animation fluide */
+}
+
+.slide_entrain {
+    width: 20%;
+    position: relative;
+    /* Ajout de position relative */
+    transition: 0.6s;
+}
+
+.slide_entrain img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#r1_entrain:checked~.s1_entrain {
+    margin-left: 0;
+}
+
+#r2_entrain:checked~.s1_entrain {
+    margin-left: -20%;
+}
+
+#r3_entrain:checked~.s1_entrain {
+    margin-left: -40%;
+}
+
+#r4_entrain:checked~.s1_entrain {
+    margin-left: -60%;
+}
+
+.slidershow_repas {
+    width: 203px;
+    height: 440px;
+    /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+}
+
+.navigation_repas {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding-left: 30px;
+}
+
+.bar_repas {
+    width: 20px;
+    height: 5px;
+    border: 2px solid #C58BF2;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar_repas:hover {
+    background: #C58BF2;
+}
+
+input[name="r_repas"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides_repas {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+    /* Ajout d'une transition pour une animation fluide */
+}
+
+.slide_repas {
+    width: 20%;
+    position: relative;
+    /* Ajout de position relative */
+    transition: 0.6s;
+}
+
+.slide_repas img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#r1_repas:checked~.s1_repas {
+    margin-left: 0;
+}
+
+#r2_repas:checked~.s1_repas {
+    margin-left: -20%;
+}
+
+#r3_repas:checked~.s1_repas {
+    margin-left: -40%;
+}
+
+#r4_repas:checked~.s1_repas {
+    margin-left: -60%;
+}
+
+/* FIN CSS FITNESSX */
+
+/* START FOOD NINJA SECTION */
+
+
+/* FOOD NINJA TITLE DEBUT */
+.ninja_title {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.ninja_title h1 {
+    font-size: 50px;
+    color: #2BCD7E;
+    text-shadow: 2px 2px 3px #181b19;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.ninja_title p {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+}
+
+/* FOOD NINJA TITLE FIN */
+
+
+
+/*###################################################*/
+
+/* FITNESS PREVIEW SLIDER DEBUT*/
+
+.wrapper_ninja {
+    position: relative;
+    height: 447px;
+    width: 676px;
+}
+
+.wrapper_ninja .img {
+    position: absolute;
+}
+
+.wrapper_ninja .img img {
+    width: 676px;
+    height: 447px;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+    border-radius: 10px;
+}
+
+#one_ninja:checked~.preview1 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#two_ninja:checked~.preview1 img,
+#two_ninja:checked~.preview2 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#three_ninja:checked~.preview1 img,
+#three_ninja:checked~.preview2 img,
+#three_ninja:checked~.preview3 img {
+    clip-path: circle(150% at 0% 100%);
+
+}
+
+#four_ninja:checked~.preview1 img,
+#four_ninja:checked~.preview2 img,
+#four_ninja:checked~.preview3 img,
+#four_ninja:checked~.preview4 img {
+    clip-path: circle(150% at 0% 100%);
+
+}
+
+#five_ninja:checked~.preview1 img,
+#five_ninja:checked~.preview2 img,
+#five_ninja:checked~.preview3 img,
+#five_ninja:checked~.preview4 img,
+#five_ninja:checked~.preview5 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+.wrapper_ninja .sliders_ninja {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    display: flex;
+}
+
+.wrapper_ninja .sliders_ninja label {
+    border: 2px solid #2BCD7E;
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+
+#one_ninja:checked~.sliders_ninja label.one_ninja,
+#two_ninja:checked~.sliders_ninja label.two_ninja,
+#three_ninja:checked~.sliders_ninja label.three_ninja,
+#four_ninja:checked~.sliders_ninja label.four_ninja,
+#five_ninja:checked~.sliders_ninja label.five_ninja {
+    width: 35px;
+    border-radius: 14px;
+    background: #2BCD7E;
+}
+
+.sliders_ninja label:hover {
+    background: #2BCD7E;
+}
+
+.wrapper_ninja input[type="radio"] {
+    display: none;
+}
+
+
+/* NINJA PREVIEW SLIDER FIN*/
+
+.ninja_presentation {
+    display: block;
+    width: 580px;
+    text-align: left;
+}
+
+.ninja_pres_bloc h3 {
+    text-align: center;
+    text-shadow: 2px 2px 3px #181b19;
+    color: #2BCD7E;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.ninja_pres_bloc h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.ninja_pres_bloc p {
+    font-family: Poppins;
+    margin-bottom: 5px;
+}
+
+/* START FITNESSX PRESENTATION SECTION 2*/
+
+.ninja_pres_sec2 h3 {
+    text-align: center;
+    text-shadow: 2px 2px 3px #181b19;
+    color: #2BCD7E;
+    font-size: 25px;
+}
+
+.ninja_pres_sec2 div {
+    margin: 40px;
+}
+
+.ninja_pres_sec2_bloc {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.ninja_pres_sec2_bloc article {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.ninja_pres_sec2_bloc h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ninja_pres_sec2_bloc h4 {
+    text-align: center;
+
+}
+
+.ninja_pres_sec2_bloc p {
+    text-align: left;
+    margin: 0;
+}
+
+/* FINISH FITNESSX PRESENTATION SECTION 2 */
+
+/* START FITNESSX PRESENTATION PARAGRAPHE SECTION 3 */
+.ninja_sec3_pa {
+    display: flex;
+    justify-content: center;
+}
+
+/* FINISH FITNESSX PRESENTATION PARAGRAPHE SECTION 3 */
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+.ninja_logo_slogan {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+
+/** LOGOOOOOO START **/
+.logo_ninja {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo_ninja h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #181b19;
+    color: #2BCD7E;
+}
+
+.logo_ninja_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo_ninja img {
+    object-fit: cover;
+}
+
+.logo_ninja img:hover {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.384);
+}
+
+/** LOGOOOOOO END **/
+
+
+/* START SLOGAN*/
+
+.ninja_slogan_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.ninja_slogan_sec h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #181b19;
+    color: #2BCD7E;
+}
+
+.ninja_slogan_sec p {
+    text-shadow: 2px 2px 3px #2BCD7E;
+}
+
+q {
+    quotes: "“" "”";
+}
+
+q::before {
+    content: open-quote;
+}
+
+q::after {
+    content: close-quote;
+}
+
+/*END SLOGAN*/
+
+/* START FITNESS IMPRESSION SECTION */
+
+.ninja_imp_box {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* */
+.ninja_imp_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ninja_imp_sec h2 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #29232e;
+    color: #2BCD7E;
+}
+
+.slidershow_ninja {
+    width: 203px;
+    height: 440px;
+    /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+}
+
+.navigation_integninja {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding-left: 15px;
+}
+
+.bar_integninja {
+    width: 20px;
+    height: 5px;
+    border: 2px solid #2BCD7E;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar_integninja:hover {
+    background: #2BCD7E;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides_integninja {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+    /* Ajout d'une transition pour une animation fluide */
+}
+
+.slide_integninja {
+    width: 20%;
+    position: relative;
+    /* Ajout de position relative */
+    transition: 0.6s;
+}
+
+.slide_integninja img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#r1_integninja:checked~.s1_integninja {
+    margin-left: 0;
+}
+
+#r2_integninja:checked~.s1_integninja {
+    margin-left: -20%;
+}
+
+#r3_integninja:checked~.s1_integninja {
+    margin-left: -40%;
+}
+
+#r4_integninja:checked~.s1_integninja {
+    margin-left: -60%;
+}
+
+#r5_integninja:checked~.s1_integninja {
+    margin-left: -80%;
+}
+
+
+.ninja_logo_slogan {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+
+/** LOGOOOOOO START **/
+.logo_ninja {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo_ninja h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #181b19;
+    color: #2BCD7E;
+}
+
+/* */
+
+/* END FOOD NINJA SECTION */
+
+
+/*** START SOCIALLY ***/
+
+
+
+
+/* FOOD NINJA TITLE DEBUT */
+.socially_title {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.socially_title h1 {
+    font-size: 50px;
+    color: #CBCDFF;
+    text-shadow: 2px 2px 3px #0b0b0b;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.socially_title p {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+}
+
+/* FOOD NINJA TITLE FIN */
+
+
+
+/*###################################################*/
+
+/* FITNESS PREVIEW SLIDER DEBUT*/
+
+.wrapper_socially {
+    position: relative;
+    height: 447px;
+    width: 676px;
+}
+
+.wrapper_socially .img {
+    position: absolute;
+}
+
+.wrapper_socially .img img {
+    width: 676px;
+    height: 447px;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+    border-radius: 10px;
+}
+
+#one_socially:checked~.preview1 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#two_socially:checked~.preview1 img,
+#two_socially:checked~.preview2 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+#three_socially:checked~.preview1 img,
+#three_socially:checked~.preview2 img,
+#three_socially:checked~.preview3 img {
+    clip-path: circle(150% at 0% 100%);
+
+}
+
+#four_socially:checked~.preview1 img,
+#four_socially:checked~.preview2 img,
+#four_socially:checked~.preview3 img,
+#four_socially:checked~.preview4 img {
+    clip-path: circle(150% at 0% 100%);
+
+}
+
+#five_socially:checked~.preview1 img,
+#five_socially:checked~.preview2 img,
+#five_socially:checked~.preview3 img,
+#five_socially:checked~.preview4 img,
+#five_socially:checked~.preview5 img {
+    clip-path: circle(150% at 0% 100%);
+}
+
+.wrapper_socially .sliders_socially {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    display: flex;
+}
+
+.wrapper_socially .sliders_socially label {
+    border: 2px solid #CBCDFF;
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+
+#one_socially:checked~.sliders_socially label.one_socially,
+#two_socially:checked~.sliders_socially label.two_socially,
+#three_socially:checked~.sliders_socially label.three_socially,
+#four_socially:checked~.sliders_socially label.four_socially,
+#five_socially:checked~.sliders_socially label.five_socially {
+    width: 35px;
+    border-radius: 14px;
+    background: #CBCDFF;
+}
+
+.sliders_socially label:hover {
+    background: #CBCDFF;
+}
+
+.wrapper_socially input[type="radio"] {
+    display: none;
+}
+
+
+/* NINJA PREVIEW SLIDER FIN*/
+
+.socially_presentation {
+    display: block;
+    width: 580px;
+    text-align: left;
+}
+
+.socially_pres_bloc h3 {
+    text-align: center;
+    text-shadow: 2px 2px 3px #0b0b0b;
+    color: #CBCDFF;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.socially_pres_bloc h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.socially_pres_bloc p {
+    font-family: Poppins;
+    margin-bottom: 5px;
+}
+
+
+/* START FITNESSX PRESENTATION SECTION 2*/
+
+.socially_pres_sec2 h3 {
+    text-align: center;
+    text-shadow: 2px 2px 3px #0b0b0b;
+    color: #CBCDFF;
+    font-size: 25px;
+}
+
+.socially_pres_sec2 div {
+    margin: 40px;
+}
+
+.socially_pres_sec2_bloc {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.socially_pres_sec2_bloc article {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.socially_pres_sec2_bloc h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.socially_pres_sec2_bloc h4 {
+    text-align: center;
+
+}
+
+.socially_pres_sec2_bloc p {
+    text-align: left;
+    margin: 0;
+}
+
+/* FINISH FITNESSX PRESENTATION SECTION 2 */
+
+/* START FITNESSX PRESENTATION PARAGRAPHE SECTION 3 */
+.socially_sec3_pa {
+    display: flex;
+    justify-content: center;
+}
+
+/* FINISH FITNESSX PRESENTATION PARAGRAPHE SECTION 3 */
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+.socially_logo_slogan {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+
+/** LOGOOOOOO START **/
+.logo_socially {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo_socially h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #0b0b0b;
+    color: #CBCDFF;
+
+}
+
+.logo_socially_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo_socially img {
+    object-fit: cover;
+    max-width: 150px;
+}
+
+.logo_socially img:hover {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.384);
+}
+
+/** LOGOOOOOO END **/
+
+
+/* START SLOGAN*/
+
+.socially_slogan_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.socially_slogan_sec h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #0b0b0b;
+    color: #CBCDFF;
+
+}
+
+.socially_slogan_sec p {
+    text-shadow: 2px 2px 3px #CBCDFF;
+}
+
+q {
+    quotes: "“" "”";
+}
+
+q::before {
+    content: open-quote;
+}
+
+q::after {
+    content: close-quote;
+}
+
+/*END SLOGAN*/
+
+/* START FITNESS IMPRESSION SECTION */
+
+.socially_imp_box {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* */
+.socially_imp_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.socially_imp_sec h2 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #0b0b0b;
+    color: #CBCDFF;
+
+}
+
+.slidershow_socially {
+    width: 203px;
+    height: 440px;
+    /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+}
+
+.navigation_integsocially {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding-left: 15px;
+}
+
+.bar_integsocially {
+    width: 20px;
+    height: 5px;
+    border: 2px solid #CBCDFF;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar_integsocially:hover {
+    background: #CBCDFF;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides_integsocially {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+    /* Ajout d'une transition pour une animation fluide */
+}
+
+.slide_integsocially {
+    width: 20%;
+    position: relative;
+    /* Ajout de position relative */
+    transition: 0.6s;
+}
+
+.slide_integsocially img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#r1_integsocially:checked~.s1_integsocially {
+    margin-left: 0;
+}
+
+#r2_integsocially:checked~.s1_integsocially {
+    margin-left: -20%;
+}
+
+#r3_integsocially:checked~.s1_integsocially {
+    margin-left: -40%;
+}
+
+#r4_integsocially:checked~.s1_integsocially {
+    margin-left: -60%;
+}
+
+#r5_integsocially:checked~.s1_integsocially {
+    margin-left: -80%;
+}
+
+.socially_logo_slogan {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* FIT LOGO SLOGAN SIDE BY SIDE*/
+
+/** LOGOOOOOO START **/
+.logo_socially {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo_socially h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #0b0b0b;
+    color: #CBCDFF;
+}
+
+/* */
+
+
+
+
+
+/***  END SOCIALLY ***/
+
+
+
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
